@@ -1,0 +1,36 @@
+
+### Landing page
+GET http://localhost:2
+
+### Shoe inventory
+GET http://localhost:2/shoes
+
+### Inventory by id
+GET http://localhost:2/shoes/65f91873c9720b36529c7708
+
+### Add a shoe
+POST http://localhost:2/shoes HTTP/1.1
+content-type: application/json
+
+{
+  "brand": "needed",
+  "line": "needed",
+  "model": "needed",
+  "height": "needed",
+  "colors": "needed"
+}
+
+### PUT- Update shoe
+PUT http://localhost:2/shoes/65f91873c9720b36529c7708
+content-type: application/json
+
+{
+  "brand": "probably",
+  "line": "probably",
+  "model": "probably",
+  "height": "probably",
+  "colors": "probably"
+}
+
+### Delete shoe
+DELETE http://localhost:2/shoes/65f91873c9720b36529c7708
