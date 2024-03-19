@@ -12,6 +12,9 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   //#swagger.tags=['Look up a shoe by inventory id. 🥾 🆔']
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid shoe id to find a shoe.');
+  }
   const shoeId = new ObjectId(req.params.id);
   const result = await mongodb.getDatabase().db().collection('nike').find({ _id: shoeId});
   result.toArray().then((nikeShoes) => {
@@ -39,6 +42,9 @@ const createShoe = async (req, res) => {
 
 const updateShoe = async (req, res) => {
   //#swagger.tags=['Update a pair of shoes. 🥿']
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid shoe id to find update shoe.');
+  }
   const shoeId = new ObjectId(req.params.id);
   const shoe = {
     brand: req.body.brand,
@@ -57,6 +63,9 @@ const updateShoe = async (req, res) => {
 
 const deleteShoe = async (req, res) => {
   //#swagger.tags=['Delete a pair of shoes. 🥺']
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid shoe id to delete a shoe.');
+  }
   const shoeId = new ObjectId(req.params.id);
   const response = await mongodb.getDatabase().db().collection('nike').deleteOne({ _id: shoeId});
   if (response.deletedCount > 0) {
