@@ -5,8 +5,8 @@ const doc = {
     title: 'Shoes Api',
     description: 'Shoes Api'
   },
-  host: 'localhost:2',
-  schemes: ['http', 'https']
+  host: 'proj2-crud-cse341.onrender.com',
+  schemes: ['https']
 };
 
 const outputFile = './swagger.json';
