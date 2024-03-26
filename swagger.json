@@ -5,12 +5,33 @@
     "description": "Shoes Api",
     "version": "1.0.0"
   },
-  "host": "proj2-crud-cse341.onrender.com",
+  "host": "localhost:2",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
+    "/login": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/nike/": {
       "get": {
         "tags": [
