@@ -224,6 +224,12 @@
                 },
                 "colors": {
                   "example": "any"
+                },
+                "retailPrice": {
+                  "example": "any"
+                },
+                "releaseDate": {
+                  "example": "any"
                 }
               }
             }
@@ -302,6 +308,12 @@
                   "example": "any"
                 },
                 "colors": {
+                  "example": "any"
+                },
+                "retailPrice": {
+                  "example": "any"
+                },
+                "releaseDate": {
                   "example": "any"
                 }
               }

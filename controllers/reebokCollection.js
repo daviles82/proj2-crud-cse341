@@ -30,7 +30,9 @@ const createShoe = async (req, res) => {
     line: req.body.line,
     model: req.body.model,
     height: req.body.height,
-    colors: req.body.colors
+    colors: req.body.colors,
+    retailPrice: req.body.retailPrice,
+    releaseDate: req.body.releaseDate
   };
   const response = await mongodb.getDatabase().db().collection('reebok').insertOne(shoe);
   if (response.acknowledged) {
@@ -51,7 +53,9 @@ const updateShoe = async (req, res) => {
     line: req.body.line,
     model: req.body.model,
     height: req.body.height,
-    colors: req.body.colors
+    colors: req.body.colors,
+    retailPrice: req.body.retailPrice,
+    releaseDate: req.body.releaseDate
   };
   const response = await mongodb.getDatabase().db().collection('reebok').replaceOne({ _id: shoeId}, shoe);
   if (response.modifiedCount > 0) {
