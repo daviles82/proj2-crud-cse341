@@ -5,7 +5,7 @@
     "description": "Shoes Api",
     "version": "1.0.0"
   },
-  "host": "proj2-crud-cse341.onrender.com",
+  "host": "proj2-crud-cse341.onrender.com/login",
   "basePath": "/",
   "schemes": [
     "https"
@@ -22,6 +22,16 @@
       }
     },
     "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api-docs": {
       "get": {
         "description": "",
         "responses": {
