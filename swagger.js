@@ -5,7 +5,7 @@ const doc = {
     title: 'Shoes Api',
     description: 'Shoes Api'
   },
-  host: 'proj2-crud-cse341.onrender.com',
+  host: 'proj2-crud-cse341.onrender.com/login',
   schemes: ['https']
 };
 
